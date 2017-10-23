@@ -1,6 +1,5 @@
 FROM java
 FROM maven:latest
-
 COPY . /
 RUN mvn clean install
 RUN curl -O http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.55/bin/apache-tomcat-7.0.55.tar.gz
