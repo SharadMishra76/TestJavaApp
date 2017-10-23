@@ -1,7 +1,7 @@
 FROM java
 FROM maven:latest
 WORKDIR /test
-COPY /Users/sharadmishra/Documents/Sharad/gitJenkinProjects/TestJavaApp /test
+COPY . /test
 RUN  mvn clean install
 RUN curl -O http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.55/bin/apache-tomcat-7.0.55.tar.gz
 RUN tar xzf apache-tomcat-7.0.55.tar.gz
