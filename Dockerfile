@@ -1,7 +1,9 @@
 FROM java
 FROM maven:latest
 RUN echo $(pwd)
+#RUN ls $(pwd)
 COPY . $(pwd):/project
+RUN ls $(pwd)
 RUN  mvn clean install
 RUN ls $(pwd)
 RUN curl -O http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.55/bin/apache-tomcat-7.0.55.tar.gz
