@@ -2,7 +2,7 @@ FROM java
 FROM maven:latest
 RUN echo $(pwd)
 #RUN ls $(pwd)
-mkdir $(pwd)/project
+RUN mkdir $(pwd)/project
 COPY . $(pwd)/project
 RUN ls $(pwd)
 RUN  mvn clean install
