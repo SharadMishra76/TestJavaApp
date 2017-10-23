@@ -1,6 +1,7 @@
 FROM java
 FROM maven:latest as build
 
+
 WORKDIR /test
 COPY . /test
 RUN  mvn clean install
