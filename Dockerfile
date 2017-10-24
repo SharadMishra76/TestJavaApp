@@ -9,5 +9,4 @@ WORKDIR /test
 RUN ls /test/target/
 COPY --from=build /test/target/TestRestDeploy.war apache-tomcat-7.0.55/webapps/
 CMD apache-tomcat-7.0.55/bin/startup.sh --privileged=true && tail -f apache-tomcat-7.0.55/logs/catalina.out
-
 EXPOSE 8080
